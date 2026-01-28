@@ -1,9 +1,11 @@
 # Nuxt 
 
 ## Ringkasan Instalasi
-cd nama-project
-npm install
-npm run dev
+1. cd nama-project
+<br>
+2. npm install
+<br>
+3. npm run dev
 
 ## Setup
 Make sure to install dependencies:

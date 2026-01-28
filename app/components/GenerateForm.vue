@@ -99,10 +99,11 @@
             Rp
           </span>
           <input
-            type="number"
+            type="text"
             :value="formattedAmount"
             @input="onAmountInput"
             placeholder="0"
+            inputmode="numeric"
             class="w-full rounded-r-lg border-1 px-2 border-gray-300 focus:ring-indigo-500 focus:border-indigo-500"
           />
         </div>
@@ -195,8 +196,8 @@ const handleSubmit = async () => {
     valid = false;
   }
 
-  if (form.amount < 0) {
-    errors.amount = "Nominal tidak boleh kurang dari 0";
+  if (!Number.isFinite(form.amount) || form.amount <= 0) {
+    errors.amount = "Nominal harus berupa angka valid";
     valid = false;
   }
 
@@ -225,7 +226,6 @@ const handleSubmit = async () => {
     const desc = pdf.splitTextToSize(form.description, contentWidth);
     pdf.text(desc, margin, 35);
     pdf.text(`Nominal: Rp ${form.amount.toLocaleString("id-ID")}`, margin, 80);
-
 
     const blob = pdf.output("blob");
     const pdfUrl = URL.createObjectURL(blob);
