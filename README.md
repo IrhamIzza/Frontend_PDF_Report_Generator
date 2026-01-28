@@ -1,11 +1,10 @@
 # Nuxt 
 
 ## Ringkasan Instalasi
-1. cd nama-project
-<br>
-2. npm install
-<br>
-3. npm run dev
+1. git clone https://github.com/IrhamIzza/Frontend_PDF_Report_Generator
+2. cd nama-project
+3. npm install
+4. npm run dev
 
 ## Setup
 Make sure to install dependencies:
