@@ -140,7 +140,7 @@ const successMessage = ref("");
 const errorMessage = ref("");
 
 const form = reactive({
-  pageSize: "",
+  pageSize: "A4",
   title: "",
   description: "",
   amount: 0,
